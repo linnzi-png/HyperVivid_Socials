@@ -1,0 +1,16 @@
+node_modules/
+.turbo/
+.next/
+out/
+dist/
+build/
+coverage/
+.expo/
+*.tsbuildinfo
+.env
+.env.*
+!.env.example
+.DS_Store
+supabase/.branches/
+supabase/.temp/
+.clawness/
