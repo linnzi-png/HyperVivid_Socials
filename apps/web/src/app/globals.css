@@ -1,26 +1,115 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* Amplivid brand: black surfaces, one indigo accent, cyan links, the full
+   spectrum reserved for the mark and highlights. Dark only by design. */
+@theme {
+  --color-canvas: #000000;
+  --color-sunken: #0b0d12;
+  --color-card: #12141c;
+  --color-raised: #1b1e28;
+  --color-line: #262a36;
+  --color-line-strong: #363b4a;
+  --color-ink: #f4f6f9;
+  --color-body: #c2c8d4;
+  --color-muted: #9aa1b2;
+  --color-indigo: #5b3dff;
+  --color-indigo-hover: #6d52ff;
+  --color-cyan: #00a8ff;
+  --color-spectrum-red: #ff1744;
+  --color-spectrum-orange: #ff6d00;
+  --color-spectrum-yellow: #ffd600;
+  --color-spectrum-green: #00e676;
+  --color-spectrum-magenta: #c026d3;
+  --font-display: var(--font-unbounded), system-ui, sans-serif;
+  --font-sans: var(--font-hanken), system-ui, sans-serif;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  color-scheme: dark;
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-canvas);
+  color: var(--color-body);
+  font-family: var(--font-sans);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-cyan);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* Long-form legal text. */
+.prose-legal h2 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 1.3;
+  color: var(--color-ink);
+  margin: 3rem 0 1rem;
+  scroll-margin-top: 6rem;
+}
+.prose-legal h3 {
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: var(--color-ink);
+  margin: 1.75rem 0 0.5rem;
+}
+.prose-legal p,
+.prose-legal li {
+  line-height: 1.7;
+}
+.prose-legal p {
+  margin: 0 0 1rem;
+}
+.prose-legal ul,
+.prose-legal ol {
+  margin: 0 0 1rem;
+  padding-left: 1.25rem;
+}
+.prose-legal ul {
+  list-style: disc;
+}
+.prose-legal ol {
+  list-style: decimal;
+}
+.prose-legal li {
+  margin: 0.35rem 0;
+}
+.prose-legal a {
+  color: var(--color-cyan);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  overflow-wrap: anywhere;
+}
+.prose-legal strong {
+  color: var(--color-ink);
+}
+.prose-legal table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.925rem;
+}
+.prose-legal th,
+.prose-legal td {
+  text-align: left;
+  vertical-align: top;
+  border-top: 1px solid var(--color-line);
+  padding: 0.75rem 0.75rem 0.75rem 0;
+}
+.prose-legal th {
+  color: var(--color-ink);
+  font-weight: 600;
+}
+.prose-legal code {
+  font-size: 0.85em;
+  color: var(--color-ink);
+  overflow-wrap: anywhere;
 }
