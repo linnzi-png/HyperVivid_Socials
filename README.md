@@ -6,7 +6,7 @@ Plan, create, schedule and publish social content for solo creators, on web and 
 
 | Path | What it is |
 | --- | --- |
-| `apps/web` | Next.js 16 web app (App Router), deployed on Vercel |
+| `apps/web` | Next.js 16 web app (App Router), deployed on Vercel. Also serves the public homepage, `/privacy`, `/terms` and `/data-deletion` that the social networks' app reviews check; facts they rely on live in `apps/web/src/lib/site.ts` and `apps/web/src/lib/legal/networks.ts` |
 | `apps/mobile` | Expo SDK 58 app for iOS and Android |
 | `packages/core` | Shared types, validation and business rules (zod) |
 | `packages/ui` | Shared design tokens |
