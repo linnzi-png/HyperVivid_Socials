@@ -445,7 +445,7 @@ export default function PrivacyPage() {
         personal information: identifiers (name, email, account IDs, IP address); customer records
         (billing details); commercial information (plan and payment history); internet or other
         electronic network activity (usage and log data); audio and visual information (videos and
-        images you upload); and professional information from connected LinkedIn accounts. We
+        images you upload). We
         collected it from you, from your devices, and from the social networks you connected, for
         the purposes in section 6, and disclosed it to the service providers in section 8 for
         business purposes. We keep it for the periods in section 10. California residents may also
