@@ -113,9 +113,9 @@ export const networkDataUses: readonly NetworkDataUse[] = [
     id: "linkedin",
     name: "LinkedIn",
     via: "Sign In with LinkedIn using OpenID Connect and Share on LinkedIn",
-    scopes: ["openid", "profile", "email", "w_member_social"],
+    scopes: ["openid", "profile", "w_member_social"],
     data: [
-      "Your LinkedIn member ID, name, profile picture and email address",
+      "Your LinkedIn member ID, name and profile picture",
     ],
     uses: [
       "Show which LinkedIn profile is connected",
