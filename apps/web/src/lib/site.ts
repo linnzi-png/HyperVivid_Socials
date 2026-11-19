@@ -20,7 +20,7 @@ export const site = {
     website: "https://www.hypervividstudios.com",
   },
   /** One inbox for privacy, deletion, legal and support requests. */
-  contactEmail: "privacy@hypervividstudios.com",
+  contactEmail: "amplivid@hypervividstudios.com",
   /** Date shown as "Effective" and "Last updated" on every legal page. */
   legalEffectiveDate: "November 17, 2026",
 } as const;

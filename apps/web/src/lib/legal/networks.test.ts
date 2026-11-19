@@ -35,6 +35,7 @@ describe("site facts", () => {
     expect(site.name).toBe("Amplivid");
     expect(site.company.legalName).toBe("HyperVivid Studios LLC");
     expect(postalAddress()).toContain("Huntington Woods, MI 48070");
+    expect(site.contactEmail).toBe("amplivid@hypervividstudios.com");
   });
 
   it("serves the legal pages at stable paths", () => {
